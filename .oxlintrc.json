@@ -1,0 +1,4 @@
+{
+  "extends": ["./oxlint.json"],
+  "ignorePatterns": ["test/fixtures/bad.tsx"]
+}

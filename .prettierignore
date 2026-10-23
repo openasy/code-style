@@ -1,0 +1,4 @@
+node_modules
+package-lock.json
+# Wrong on purpose: the tests check oxlint finds what is wrong in it.
+test/fixtures/bad.tsx
