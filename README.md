@@ -32,7 +32,7 @@ npm install --save-dev https://github.com/openasy/code-style/releases/download/v
 ```
 
 oxlint skips what `.gitignore` lists. Generated files kept in the repository go in the repository's own
-`.oxlintrc.json` as `"ignorePatterns"`, since patterns in an extended file do not apply. A `.prettierignore` lists what is generated, such as `dist`, `build` and `package-lock.json`. CI runs `npm run lint` and `npm run format:check` next to the typecheck and the tests.
+`.oxlintrc.json` as `"ignorePatterns"`, since patterns in an extended file do not apply. A `.prettierignore` lists what is generated, such as `dist`, `build` and `package-lock.json`, and `*.md`: Prettier pads each table row to its widest cell, which long tables in READMEs and decisions do not survive. CI runs `npm run lint` and `npm run format:check` next to the typecheck and the tests.
 
 ## What it sets
 

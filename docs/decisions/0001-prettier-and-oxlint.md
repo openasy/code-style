@@ -12,7 +12,7 @@ The OpenAsy repositories were formatted by hand and by editors set up differentl
 ## Decision
 
 - **One package, `@openasy/code-style`, holds the settings.** Every repository installs it, with `prettier` and `oxlint`, as development dependencies. A change to the style is a release of this package and a dependency update in each repository.
-- **Prettier formats.** Lines wrap at 160 characters; double quotes, semicolons and trailing commas, as the code was already written. A repository points at the settings with `"prettier": "@openasy/code-style/prettier"` in its `package.json`.
+- **Prettier formats.** Lines wrap at 160 characters; double quotes, semicolons and trailing commas, as the code was already written. A repository points at the settings with `"prettier": "@openasy/code-style/prettier"` in its `package.json`. Markdown is left out in `.prettierignore`: READMEs and decisions are prose wrapped by hand, and Prettier pads every table row to its widest cell, which makes long tables unreadable as text.
 - **oxlint lints.** The repositories compile with TypeScript 7, which has no JavaScript API, so typescript-eslint cannot read them; oxlint needs no TypeScript and runs in well under a second. A repository's `.oxlintrc.json` extends `node_modules/@openasy/code-style/oxlint.json`. oxlint skips what `.gitignore` lists; generated files kept in a repository are ignored in its own `.oxlintrc.json`, because an extended file's ignore patterns do not apply.
 - **The rules are the ones that find mistakes.** oxlint's correctness rules, the React hook rules and `jsx-key`, with these off:
   - `no-unused-expressions`: `a && b()` and `(a(), b())` are how the code is written.
