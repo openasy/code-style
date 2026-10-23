@@ -1,6 +1,6 @@
 {
   "name": "@openasy/code-style",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "One code style for every OpenAsy repository: the Prettier and oxlint settings.",
   "license": "Apache-2.0",
   "repository": {
