@@ -20,6 +20,7 @@ The OpenAsy repositories were formatted by hand and by editors set up differentl
   - `react/set-state-in-effect`, `react/refs`, `react/preserve-manual-memoization`: advice for the React Compiler, which the products do not use.
   - `jsx-a11y/prefer-tag-over-role`, and `jsx-a11y/no-noninteractive-tabindex`, since a scrollable region needs `tabIndex={0}` to be reached by keyboard.
   - `react/rules-of-hooks` in Storybook stories, whose `render` functions call hooks as components do.
+- **A label may hold its text a few elements deep.** `label-has-associated-control` looks five levels into a `<label>`, as the forms wrap the title and the hint of a choice in spans of their own.
 - **CI runs both.** `npm run lint` and `npm run format:check` run next to the typecheck and the tests, and a failure stops the change.
 
 ## Consequences
