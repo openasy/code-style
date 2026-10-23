@@ -7,7 +7,7 @@ One code style for every [OpenAsy](https://github.com/openasy) repository: the [
 Each release attaches the package to its [GitHub release](https://github.com/openasy/code-style/releases); no registry or token is needed.
 
 ```bash
-npm install --save-dev https://github.com/openasy/code-style/releases/download/v0.1.0/openasy-code-style-0.1.0.tgz prettier@3.9.9 oxlint@1.87.0
+npm install --save-dev https://github.com/openasy/code-style/releases/download/v0.1.1/openasy-code-style-0.1.1.tgz prettier@3.9.9 oxlint@1.87.0
 ```
 
 `package.json`:
